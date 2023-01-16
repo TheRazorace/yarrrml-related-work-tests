@@ -1,0 +1,12 @@
+@prefix ex:    <http://example/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <<missing URL>> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+ex:1    a          foaf:Person ;
+        ex:jumps   "4.80"^^xsd:float ;
+        foaf:name  "Angelica Bengtsson" .
+
+ex:2    a          foaf:Person ;
+        ex:jumps   "4.85"^^xsd:float ;
+        foaf:name  "Katerina Stefanidi" .
