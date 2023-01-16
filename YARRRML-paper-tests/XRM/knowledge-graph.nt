@@ -1,0 +1,6 @@
+<http://example/1> <http://example/jumps> "4.80"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://example/2> <http://example/jumps> "4.85"^^<http://www.w3.org/2001/XMLSchema#float> .
+<http://example/1> <http://xmlns.com/foaf/0.1/name> "Angelica Bengtsson" .
+<http://example/2> <http://xmlns.com/foaf/0.1/name> "Katerina Stefanidi" .
+<http://example/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .

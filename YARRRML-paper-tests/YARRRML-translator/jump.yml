@@ -1,0 +1,13 @@
+prefixes:
+  ex: http://example/
+  foaf: http://xmlns.com/foaf/0.1/
+
+mappings:
+  jumpTM:
+    sources:
+      - ['data.csv~csv']
+    s: ex:$(ID)
+    po:
+      - [a, foaf:Person]
+      - [foaf:name, $(PERSON)]
+      - [ex:jumps, $(MARK), xsd:float]

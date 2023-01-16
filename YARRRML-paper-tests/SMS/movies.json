@@ -1,0 +1,45 @@
+[{
+	"_id": "unforgiven",
+	"name": "Unforgiven",
+	"datePublished": "1992-08-07T00:00:00.000Z",
+	"genre": ["Drama", "Western"],
+	"boxOffice": 101157447,
+	"description": "Retired gunslinger reluctantly takes on one last job.",
+	"director": [{
+		"director": "clintEastwood",
+		"name": "Clint Eastwood"
+	}],
+	"actor": [{
+			"actor": "morganFreeman",
+			"name": "Morgan Freeman"
+		},
+		{
+			"actor": "clintEastwood",
+			"name": "Clint Eastwood"
+		},
+		{
+			"actor": "geneHackman",
+			"name": "Gene Hackman"
+		}
+	]
+}, {
+	"_id": "noWayOut",
+	"name": "No Way Out",
+	"datePublished": "1987-08-14T00:00:00.000Z",
+	"genre": ["Action", "Mystery", "Drama", "Thriller"],
+	"boxOffice": 35509515,
+	"description": "A coverup and witchhunt occur after a politician accidentally kills his mistress.",
+	"director": [{
+		"director": "rogerDonaldson",
+		"name": "Roger Donaldson"
+	}],
+	"actor": [{
+			"actor": "geneHackman",
+			"name": "Gene Hackman"
+		},
+		{
+			"actor": "kevinCostner",
+			"name": "Kevin Costner"
+		}
+	]
+}]

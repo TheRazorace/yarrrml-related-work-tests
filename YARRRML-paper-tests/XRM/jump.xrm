@@ -1,0 +1,49 @@
+output rml
+
+map jump_mapping from jump{
+    subject template "http://example/{0}" with ID;
+
+    types
+        foaf.Person
+
+    properties
+        foaf.name from PERSON;
+        ex.jumps from MARK with datatype xsd.float;
+
+}
+
+vocabulary foaf{
+    prefix "foaf" "http://xmlns.com/foaf/0.1/"
+
+    classes
+        Person 
+
+    properties
+        name
+}
+
+vocabulary ex{
+    prefix "ex" "http://example/"
+
+    properties
+        jumps
+}
+
+vocabulary xsd {
+	prefix "xsd" "http://www.w3.org/2001/XMLSchema#"
+
+	datatypes
+		float
+}
+
+
+
+logical-source jump {
+	type csv
+	source "data.csv"
+
+	referenceables
+		ID
+		PERSON
+		MARK
+}

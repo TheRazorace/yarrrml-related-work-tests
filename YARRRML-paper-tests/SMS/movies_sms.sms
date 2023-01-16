@@ -1,0 +1,41 @@
+PREFIX : <http://stardog.com/movies/>
+MAPPING <urn:movies>
+FROM JSON {
+ [{
+   "_id":"?movieId",
+   "name":"?name",
+  
+ "datePublished":"?datePublished",
+   "genre":["?genre"],
+   "boxOffice":"?boxOffice",
+   "description":"?description",
+   "director":[ {
+     "director":"?directorId",
+     "name":"?directorName"
+   }
+   ],
+   "actor":[{
+     "actor":"?actorId",
+     "name":"?actorName"
+   }]
+ }]
+}
+TO {
+ ?movie a :Movie ;
+   :name ?name ;
+ 
+a :ActedInMovie ;
+   :actor ?actor ;
+   :name “?actorName”@en  .
+ 
+ ?actor a :Person .
+}
+WHERE {
+ BIND (template("http://stardog.com/movies/Job_{movieId}_{directorId}") AS ?directedMovie)
+ BIND (template("http://stardog.com/movies/Job_{movieId}_{actorId}") AS ?actedInMovie)
+ BIND (template("http://stardog.com/movies/Title_{movieId}") AS ?movie)
+ BIND (template("http://stardog.com/movies/Name_{directorId}") AS ?director)
+ BIND (template("http://stardog.com/movies/Name_{actorId}") AS ?actor)
+ BIND (xsd:date(?datePublished) AS ?xsdDatePublished)
+ BIND (xsd:integer(?boxOffice) as ?boxOfficeNum)
+}

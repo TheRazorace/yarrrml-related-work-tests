@@ -1,0 +1,17 @@
+PREFIX ex:    <http://example/>
+PREFIX foaf:  <http://xmlns.com/foaf/0.1/>
+
+MAPPING
+FROM CSV {
+}
+TO {
+    ?athlete_id a foaf:Person;
+        foaf:name ?name; 
+        ex:jumps ?mark.
+}
+
+WHERE {
+     BIND(TEMPLATE("http://example/{ID}") AS ?athlete_id)
+     BIND (xsd:float(?MARK) as ?mark)
+     BIND (?PERSON as ?name)
+}
